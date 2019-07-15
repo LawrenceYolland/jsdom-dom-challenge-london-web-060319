@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
 )
 
 function addValue(event) {
-  counter.innerText = parseInt(counter.innerText)+1;
+  counter.innerText++
+  //counter.innerText = parseInt(counter.innerText)+1;
 }
 
 function subtractValue(event) {
-  counter.innerText = parseInt(counter.innerText)-1;
+  counter.innerText--
+  // counter.innerText = parseInt(counter.innerText)-1;
 }
 
 function addComment(event) {
@@ -36,7 +38,7 @@ function addLike(event) {
   likeCount[document.getElementById("counter").innerText] = likeCount[document.getElementById("counter").innerText]+1 || 1;
   console.log(likeCount)
   const likeList = document.getElementById("likes");
-  likeList.innerHTML = '';
+  likeList.innerHTML = ''; // reset list content
   for (n in likeCount){
     likeList.innerHTML += `<li>${n} has ${likeCount[n]} likes</li>`;
   }
