@@ -3,7 +3,8 @@ const counter = document.getElementById("counter"),
       down = document.getElementById("-"),
       commentForm = document.getElementById("comment-form"),
       controlButton = document.getElementById("pause"),
-      buttons = document.querySelectorAll("body > button:not(#pause)"),likeButton = document.getElementById('<3'),
+      buttons = document.querySelectorAll("body > button:not(#pause)"),
+      likeButton = document.getElementById('<3'),
       likeCount = {};
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,7 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   controlButton.addEventListener("click", runApp);
   likeButton.addEventListener("click", addLike);
   runCounter();
-});
+  }
+)
 
 function addValue(event) {
   counter.innerText = parseInt(counter.innerText)+1;
@@ -37,7 +39,7 @@ function addLike(event) {
   likeList.innerHTML = '';
   for (n in likeCount){
     likeList.innerHTML += `<li>${n} has ${likeCount[n]} likes</li>`;
-  };
+  }
 }
 
 function runCounter() {
