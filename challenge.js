@@ -36,7 +36,7 @@ function addComment(event) {
 
 function addLike(event) {
   likeCount[document.getElementById("counter").innerText] = likeCount[document.getElementById("counter").innerText]+1 || 1;
-  console.log(likeCount)
+  // console.log(likeCount)
   const likeList = document.getElementById("likes");
   likeList.innerHTML = ''; // reset list content
   for (n in likeCount){
